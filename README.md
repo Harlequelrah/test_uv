@@ -8,7 +8,7 @@ Voici mes notes sur le cours uv de openclassroom.
 ## `1- Intitialisation  de uv`
 
 ```cmd
-uv intit nom_du_projet
+uv init nom_du_projet
 ```
 
 ## `2- Retirer une dépendance`
@@ -60,18 +60,46 @@ uv export --format requirements-txt --no-hashes > requirements.txt
 ## `1- Migration d'un projet depuis pip`
 
 - Installation de package :
-    ```cmd
+
+```cmd
     uv pip install -r requirements.txt
-    ```
-ou
+```
+**note** : Pour utiliser uv à terme on peut utiliser la  commande suivante
 
-    ```cmd
+```cmd
     ud add -v requirements.txt
-    ```
+```
 
-**note** : Pour utiliser uv à terme on peut utiliser la deuxième commande
+## `2- Configurer un environnement à partir de uv`
+
+- Créer un environnement virtuel
+
+- Installer les dépendances dans le uv.lock :
+```cmd
+    uv lock
+```
+
+## `3- Mettre à jour les dépendances`
+
+```cmd
+   uv lock -upgrade
+```
+
+## `3- Grouper les dépendances`
+
+- Installer une dépendance dans un groupe .
+
+**exemple**  :
+```cmd
+   uv add --group data_dep ipykernel
+```
 
 
+- Installer uniquement les dépendances principales :
+
+```cmd
+   uv sync --no-dev
+```
 
 # Contact
 `Mail` : **maximeatsoudegbovi@gmail.com**
