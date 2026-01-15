@@ -85,7 +85,7 @@ uv export --format requirements-txt --no-hashes > requirements.txt
    uv lock -upgrade
 ```
 
-## `3- Grouper les dépendances`
+## `4- Grouper les dépendances`
 
 - Installer une dépendance dans un groupe .
 
@@ -99,6 +99,20 @@ uv export --format requirements-txt --no-hashes > requirements.txt
 
 ```cmd
    uv sync --no-dev
+```
+
+## `5- Tool Management`
+
+**exemple** : précision à uv de télécharger uniquement une version cpu de pytorch
+
+```toml
+[tool.uv.sources]
+
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+
+url = "https://download.pytorch.org/whl/cpu" explicit = true
 ```
 
 # Contact
