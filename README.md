@@ -82,7 +82,7 @@ uv export --format requirements-txt --no-hashes > requirements.txt
 ## `3- Mettre à jour les dépendances`
 
 ```cmd
-   uv lock -upgrade
+   uv lock --upgrade
 ```
 
 ## `4- Grouper les dépendances`
