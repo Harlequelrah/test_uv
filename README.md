@@ -1,4 +1,5 @@
 # **`Notes uv`**
+
 Voici mes notes sur le cours uv de openclassroom.
 
 **url** : **https://openclassrooms.com/fr/courses/8445356-gerez-votre-environnement-python-avec-uv**
@@ -16,18 +17,20 @@ uv init nom_du_projet
 ```cmd
 uv add dependance
 ```
+
 ou pour choisir l'environnemnt active
+
 ```cmd
 uv add dependance --active
 ```
+
 ## `3- Retirer une dépendance`
 
 ```cmd
 uv remove dependance
 ```
 
-
-##  `4- Rafraichir l'environnement virtuel si fichier pyproject.toml modifié`
+## `4- Rafraichir l'environnement virtuel si fichier pyproject.toml modifié`
 
 ```cmd
 uv sync
@@ -50,7 +53,9 @@ uv venv env
 ```cmd
 uv export --format requirements-txt > requirements.txt
 ```
+
 ou
+
 ```cmd
 uv export --format requirements-txt --no-hashes > requirements.txt
 ```
@@ -64,10 +69,11 @@ uv export --format requirements-txt --no-hashes > requirements.txt
 ```cmd
     uv pip install -r requirements.txt
 ```
-**note** : Pour utiliser uv à terme on peut utiliser la  commande suivante
+
+**note** : Pour utiliser uv à terme on peut utiliser la commande suivante
 
 ```cmd
-    ud add -v requirements.txt
+    ud add -r requirements.txt
 ```
 
 ## `2- Configurer un environnement à partir de uv`
@@ -75,6 +81,7 @@ uv export --format requirements-txt --no-hashes > requirements.txt
 - Créer un environnement virtuel
 
 - Installer les dépendances dans le uv.lock :
+
 ```cmd
     uv lock
 ```
@@ -89,11 +96,11 @@ uv export --format requirements-txt --no-hashes > requirements.txt
 
 - Installer une dépendance dans un groupe .
 
-**exemple**  :
+**exemple** :
+
 ```cmd
    uv add --group data_dep ipykernel
 ```
-
 
 - Installer uniquement les dépendances principales :
 
@@ -116,4 +123,5 @@ url = "https://download.pytorch.org/whl/cpu" explicit = true
 ```
 
 # Contact
+
 `Mail` : **maximeatsoudegbovi@gmail.com**
